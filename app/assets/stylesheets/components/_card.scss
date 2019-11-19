@@ -1,27 +1,25 @@
 .card-trip {
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 .card-trip > img {
-  height: 175px;
+  height: 235px;
   width: 100%;
   object-fit: cover;
 }
 
 .card-trip h2 {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   margin: 0;
 }
 
 .card-trip p {
-  font-size: 12px;
+  font-size: 11px;
   opacity: .7;
   margin: 0;
 }
-
 
 .card-trip .card-trip-infos {
   padding: 16px;
@@ -44,9 +42,25 @@
   justify-content: space-between;
 }
 
+// .dog-characteristics {
+//   display: flex;
+//   justify: space-around;
+// }
+
 .card-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 20px;
-  padding: 20px;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 60px;
+  padding: 50px 100px;
 }
+
+i {
+  font-size: 13px;
+}
+
+.heading{
+  margin-left: 100px;
+  margin-top: 50px;
+}
+
+

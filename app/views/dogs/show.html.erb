@@ -1,8 +1,69 @@
-<div class="show-card">
+<div class="card-show" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url()">
+  <h1><%= @dog.name %></h1>
+</div>
+
 <h1>Doggy's name: <%= @dog.name %></h1>
-<br>
-<%# if @dog.photo.present? %>
-<%#= cl_image_tag @dog.photo, height: 300, width: 400, crop: :fill %>
-<%# end %>
+
+ <div class="card-info">
+  <div>
+<p>
+  <strong>Breed:</strong>
+  <%= @dog.breed %>
+</p>
+
+<p>
+  <strong>Postcode:</strong>
+  <%= @dog.postcode %>
+</p>
+</div>
+
+<div class="card-more-info">
+<p>
+  <strong>Age:</strong>
+  <%= @dog.age %>
+</p>
+
+<p>
+  <strong>Sex:</strong>
+  <%= @dog.sex %>
+</p>
+</div>
+</div>
+
+<p>
+  <strong>Description:</strong>
+  <%= @dog.description %>
+</p>
+
+<div class="card-info">
+<div class="left">
+<p>
+  <strong>Cuddly:</strong>
+  <%= @dog.cuddly %>
+</p>
+
+<p>
+  <strong>Obedient:</strong>
+  <%= @dog.obedient %>
+</p>
+</div>
+
+<div class="right">
+<p>
+  <strong>Energetic:</strong>
+  <%= @dog.energetic %>
+</p>
+
+<p>
+  <strong>Couchpotato:</strong>
+  <%= @dog.couchpotato %>
+</p>
+</div>
+</div>
+
+<p>
+  <strong>Price:</strong>
+  <span><%= @dog.price %> $</span>
+</p>
 
 </div>

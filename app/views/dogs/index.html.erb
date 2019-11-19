@@ -1,4 +1,4 @@
-<h1> Doggies ready for a hangout: </h1>
+<h1> Dogs Ready For Hangout </h1>
 
 <div class="list">
 <% @dogs.each do |dog| %>
@@ -10,6 +10,21 @@
 <p> <%= dog.energetic %></p>
 <p> <%= dog.obedient %></p>
 <p> <%= dog.price %></p>
+
+  <div class="card-product">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+    <div class="card-product-infos">
+      <h2><%= link_to dog.name, dog_path(dog) %></h2>
+      <p><%= dog.breed %>, <%= dog.sex %>, <%= dog.age %></p>
+      <div class="dog-traits">
+        <p>Cuddl <%= dog.cuddly %></p>
+        <p>Energetic <%= dog.energetic %></p>
+        <p>O <%= dog.obedient %></p>
+        <p>P <%= dog.price %></p>
+      </div>
+    </div>
+  </div>
+
 
 <% end %>
 

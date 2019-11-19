@@ -1,3 +1,28 @@
-// body {
-//   background-color:white;
-// }
+body {
+  background-color: white;
+}
+
+.landing-page-h1{
+  font-size: 170px;
+  position: absolute;
+  top:25vh;
+}
+
+.high5dog {
+  border-radius: 50%;
+  width: 80vh;
+  height: 80vh;
+  background: url('https://media.giphy.com/media/YTXujdmJn3iOVZhMlQ/giphy.gif');
+  background-size: cover;
+  background-position: -40vh 0;
+  // padding: 300px;
+
+}
+
+.landing-page-subtitle {
+  position: absolute;
+  bottom:5vh;
+}
+
+
+

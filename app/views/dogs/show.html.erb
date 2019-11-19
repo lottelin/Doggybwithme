@@ -1,73 +1,83 @@
 <div class="show-container">
-<div class="card-show" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url()">
+  <div class="card-show" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @dog.photo, height: 300, width: 400, crop: :fill %>')">
+    <!-- <h1><%#= @dog.name %></h1> -->
+  </div>
+
   <h1><%= @dog.name %></h1>
+
+  <div class="row">
+    <div class="col-7">
+
+      <p>
+        <strong>Breed:</strong>
+        <%= @dog.breed %>
+      </p>
+
+      <p>
+        <strong>Postcode:</strong>
+        <%= @dog.postcode %>
+      </p>
+      <p>
+        <strong>Age:</strong>
+        <%= @dog.age %>
+      </p>
+
+      <p>
+        <strong>Sex:</strong>
+        <%= @dog.sex %>
+      </p>
+
+    </div>
+    <div class="col-5 text-right">
+     <a class="btn btn-gradient" href="#">Book Me</a>
+     <%#= link_to "Book me",  %>
+  </div>
 </div>
-
-<h1>Doggy's name: <%= @dog.name %></h1>
-
-<%# cl_image_tag @dog.photo, height: 300, width: 400, crop: :fill %>
-
- <div class="card-info">
-  <div>
-<p>
-  <strong>Breed:</strong>
-  <%= @dog.breed %>
-</p>
-<br>
-<p>
-  <strong>Postcode:</strong>
-  <%= @dog.postcode %>
-</p>
-</div>
-
-<div class="card-more-info">
-<p>
-  <strong>Age:</strong>
-  <%= @dog.age %>
-</p>
-
-<p>
-  <strong>Sex:</strong>
-  <%= @dog.sex %>
-</p>
-</div>
-</div>
-
 <p>
   <strong>Description:</strong>
   <%= @dog.description %>
 </p>
 
-<div class="card-info">
-<div class="left">
-<p>
-  <strong>Cuddly:</strong>
-  <%= @dog.cuddly %>
-</p>
+<div class='d-flex justify-content-between'>
+  <div class="card-info">
+    <div class="left">
+      <p>
+        <strong>Cuddly:</strong>
+        <% @dog.cuddly.times do %>
+        <i class="fas fa-paw"></i>
+        <% end %>
+      </p>
 
-<p>
-  <strong>Obedient:</strong>
-  <%= @dog.obedient %>
-</p>
-</div>
+      <p>
+        <strong>Obedient:</strong>
+        <% @dog.obedient.times do %>
+        <i class="fas fa-paw"></i>
+        <% end %>
+      </p>
+    </div>
 
 
-<div class="right">
-<p>
-  <strong>Energetic:</strong>
-  <%= @dog.energetic %>
-</p>
+    <div class="right">
+      <p>
+        <strong>Energetic:</strong>
+        <% @dog.energetic.times do %>
+        <i class="fas fa-paw"></i>
+        <% end %>
+      </p>
 
-<p>
-  <strong>Couchpotato:</strong>
-  <%= @dog.couchpotato %>
-</p>
-</div>
-</div>
-
-<p>
-  <strong>Price:</strong>
-  <span><%= @dog.price %> $</span>
-</p>
-
+      <p>
+        <strong>Couchpotato:</strong>
+        <% @dog.couchpotato.times do %>
+        <i class="fas fa-paw"></i>
+        <% end %>
+      </p>
+    </div>
+  </div>
+    <div>
+        <p>
+          <strong>Price:</strong>
+          <span><%= @dog.price %> $</span>
+        </p>
+    </div>
+  </div>
 </div>

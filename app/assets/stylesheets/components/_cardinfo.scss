@@ -1,8 +1,11 @@
 .card-info {
   overflow: hidden;
   height: 120px;
-  background: white;
+  // background: rose;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  width: 70%;
+  padding: 16px;
 }

@@ -25,4 +25,21 @@ body {
 }
 
 
+.paw {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  bottom: 200px;
+  right:200px;
+  mix-blend-mode: darken;
+  cursor: inherit;
+  z-index: 10;
+}
+
+.paw:hover {
+  width: 130px;
+  height: 130px;
+}
+
+
 

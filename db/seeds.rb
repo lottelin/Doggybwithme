@@ -22,7 +22,7 @@ d2 = Dog.new(name: 'Storm', user: User.last, breed: 'Pug', postcode: 10557, age:
 d2.remote_photo_url = url2
 d2.save
 
-url3 = "https://res.cloudinary.com/dlajprtba/image/upload/v1574171693/Dogs/Dachshund2_exgyrx.jpg"
+url3 = "https://res.cloudinary.com/dlajprtba/image/upload/v1574171699/Dogs/Dachsund1_mgdrdr.jpg"
 d3 = Dog.new(name: 'Bailey', user: User.last, breed: 'Dachshund', postcode: 10559, age: 'Teen', sex: 'Female', description: 'Chill and cool, with a coat as smooth as silk. Ideal lap dog companion.', cuddly: 4, energetic: 4, obedient: 3, couchpotato: 5, price: 23)
 d3.remote_photo_url = url3
 d3.save

@@ -1,4 +1,6 @@
-<h1> Dogs Ready For Hangout </h1>
+<div class="heading">
+  <h1> Dogs Ready For Hangout </h1>
+</div>
 
 <div class="card-container">
   <% @dogs.each do |dog| %>
@@ -7,12 +9,28 @@
     <div class="card-trip-infos">
       <div>
         <h2><%= link_to dog.name, dog_path(dog) %></h2>
-        <p><%= dog.breed %>, <%= dog.sex %>, <%= dog.age %></p>
+        <span><%= dog.breed %>  <%= dog.sex %>  <%= dog.age %></span>
         <div class="dog-traits">
-          <p>Cuddly: <%= dog.cuddly %></p>
-          <p>Energetic: <%= dog.energetic %></p>
-          <p>Obedient: <%= dog.obedient %></p>
-          <p>Couchpotato: <%= dog.couchpotato %></p>
+          <div class="dog-characteristics">
+            <p class="mr-4">Cuddly: <% dog.cuddly.to_i.times do  %>
+              <i class="fas fa-paw mr-1"></i>
+            <% end %>
+            </p>
+            <p>Energetic: <% dog.energetic.to_i.times do %>
+              <i class="fas fa-paw mr-1"></i>
+              <% end %>
+            </p>
+          </div>
+          <div class="dog-characteristics">
+            <p>Obedient: <% dog.obedient.to_i.times do  %>
+              <i class="fas fa-paw mr-1"></i>
+            <% end %>
+            </p>
+            <p>Couchpotato: <% dog.couchpotato.to_i.times do %>
+              <i class="fas fa-paw mr-1"></i>
+            <% end %>
+            </p>
+          </div>
         </div>
       </div>
       <h2 class="card-trip-pricing">$<%= dog.price %></h2>

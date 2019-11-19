@@ -18,8 +18,6 @@ ActiveRecord::Schema.define(version: 2019_11_18_145651) do
   create_table "bookings", force: :cascade do |t|
     t.bigint "dog_id"
     t.bigint "user_id"
-    t.date "date_from"
-    t.date "date_to"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["dog_id"], name: "index_bookings_on_dog_id"

@@ -1,12 +1,26 @@
-<h1> Doggies ready for a hangout: </h1>
+<h1> Dogs Ready For Hangout </h1>
+
+<div class="card-container">
+  <% @dogs.each do |dog| %>
+  <div class="card-trip">
+    <%= cl_image_tag dog.photo %>
+    <div class="card-trip-infos">
+      <div>
+        <h2><%= link_to dog.name, dog_path(dog) %></h2>
+        <p><%= dog.breed %>, <%= dog.sex %>, <%= dog.age %></p>
+        <div class="dog-traits">
+          <p>Cuddly: <%= dog.cuddly %></p>
+          <p>Energetic: <%= dog.energetic %></p>
+          <p>Obedient: <%= dog.obedient %></p>
+          <p>Couchpotato: <%= dog.couchpotato %></p>
+        </div>
+      </div>
+      <h2 class="card-trip-pricing">$<%= dog.price %></h2>
+    </div>
+  </div>
+  <% end %>
 
 
-<% @dogs.each do |dog| %>
-<h2><%= link_to dog.name, dog_path(dog) %></h2>
-<p> <%= dog.breed %></p>
-<p> <%= dog.sex %></p>
-
-<% end %>
-
+</div>
 <%#= link_to "Add your  dog", new_new_path %>
 

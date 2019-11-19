@@ -1,32 +1,25 @@
 <h1> Dogs Ready For Hangout </h1>
 
-<div class="list">
-<% @dogs.each do |dog| %>
-<h2><%= link_to dog.name, dog_path(dog) %></h2>
-<p> <%= dog.breed %></p>
-<p> <%= dog.sex %></p>
-<p> <%= dog.age %></p>
-<p> <%= dog.cuddly %></p>
-<p> <%= dog.energetic %></p>
-<p> <%= dog.obedient %></p>
-<p> <%= dog.price %></p>
-
-  <div class="card-product">
-    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-    <div class="card-product-infos">
-      <h2><%= link_to dog.name, dog_path(dog) %></h2>
-      <p><%= dog.breed %>, <%= dog.sex %>, <%= dog.age %></p>
-      <div class="dog-traits">
-        <p>Cuddl <%= dog.cuddly %></p>
-        <p>Energetic <%= dog.energetic %></p>
-        <p>O <%= dog.obedient %></p>
-        <p>P <%= dog.price %></p>
+<div class="card-container">
+  <% @dogs.each do |dog| %>
+  <div class="card-trip">
+    <%= cl_image_tag dog.photo %>
+    <div class="card-trip-infos">
+      <div>
+        <h2><%= link_to dog.name, dog_path(dog) %></h2>
+        <p><%= dog.breed %>, <%= dog.sex %>, <%= dog.age %></p>
+        <div class="dog-traits">
+          <p>Cuddly: <%= dog.cuddly %></p>
+          <p>Energetic: <%= dog.energetic %></p>
+          <p>Obedient: <%= dog.obedient %></p>
+          <p>Couchpotato: <%= dog.couchpotato %></p>
+        </div>
       </div>
+      <h2 class="card-trip-pricing">$<%= dog.price %></h2>
     </div>
   </div>
+  <% end %>
 
-
-<% end %>
 
 </div>
 <%#= link_to "Add your  dog", new_new_path %>

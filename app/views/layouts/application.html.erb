@@ -9,29 +9,15 @@
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
+
+
   <body>
-
-  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-    <div width="100px" class="test">
-      <a class="navbar-brand" href="#">
-        <%= image_tag 'Logo_Dog.png', class: 'logo' %>
-      </a>
-    </div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <p>Home</p>
-        <div class="signout relative">
-          <p>Sign-out</p>
-          <%= link_to "", destroy_user_session_path, method: :delete, class:"absolute" %>
-        </div>
-      </div>
-    </div>
-
-
+    <%= render 'shared/navbar' %>
     <%= yield %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
   </body>
 </html>
+
+
+

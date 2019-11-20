@@ -1,5 +1,5 @@
 <div class="heading">
-  <h1> Dogs Ready For Hangout </h1>
+  <h1> Dogs Ready For<br>Hangout </h1>
 </div>
 
 <div class="card-container">
@@ -8,7 +8,12 @@
     <%= cl_image_tag dog.photo %>
     <div class="card-trip-infos">
       <div>
-        <h2><%= link_to dog.name, dog_path(dog) %></h2>
+
+        <div class= 'd-flex position-relative'>
+        <h2 class= 'woof-hover'><%= link_to dog.name, dog_path(dog) %></h2>
+         <%= image_tag "woof.png", alt: "woof", class:'woof' %>
+        </div>
+
         <span><%= dog.breed %>  <%= dog.sex %>  <%= dog.age %></span>
         <div class="dog-traits">
           <div class="dog-characteristics">

@@ -1,8 +1,7 @@
-
 <div class="card-product">
   <div class="card-product-infos">
     <h2 id="fullname"><%= @user.fullname %></h2>
-    <h2><strong>Recent Bookings</strong></h2>
+    <h2><strong>Recent Hangouts</strong></h2>
   </div>
 </div>
 
@@ -10,7 +9,7 @@
 
 <% current_user.bookings.each do |booking| %>
   <div class="card-trip">
- <h2>Booked Doggy</h2>
+ <h2>Dog Booked</h2>
   <% dog = Dog.find(booking.dog_id) %>
   <h3><%= link_to dog.name, dog_path(dog) %></h3>
   <%= cl_image_tag dog.photo %>

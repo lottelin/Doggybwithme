@@ -5,20 +5,21 @@
 
   <h1><%= @dog.name %></h1>
 
+
   <div class="row">
     <div class="col-7">
 
       <p>
-        <strong>Breed:</strong>
+        <strong>Breed</strong>
         <%= @dog.breed %>
       </p>
 
       <p>
-        <strong>Postcode:</strong>
+        <strong>Postcode</strong>
         <%= @dog.postcode %>
       </p>
       <p>
-        <strong>Age:</strong>
+        <strong>Age</strong>
         <%= @dog.age %>
       </p>
 
@@ -30,7 +31,7 @@
     </div>
 </div>
 <p>
-  <strong>Description:</strong>
+  <strong>Description</strong>
   <%= @dog.description %>
 </p>
 
@@ -38,14 +39,14 @@
   <div class="card-info">
     <div class="left">
       <p>
-        <strong>Cuddly:</strong>
+        <strong>Cuddly</strong>
         <% @dog.cuddly.times do %>
         <i class="fas fa-paw"></i>
         <% end %>
       </p>
 
       <p>
-        <strong>Obedient:</strong>
+        <strong>Obedient</strong>
         <% @dog.obedient.times do %>
         <i class="fas fa-paw"></i>
         <% end %>
@@ -55,14 +56,14 @@
 
     <div class="right">
       <p>
-        <strong>Energetic:</strong>
+        <strong>Energetic</strong>
         <% @dog.energetic.times do %>
         <i class="fas fa-paw"></i>
         <% end %>
       </p>
 
       <p>
-        <strong>Couchpotato:</strong>
+        <strong>Couchpotato</strong>
         <% @dog.couchpotato.times do %>
         <i class="fas fa-paw"></i>
         <% end %>
@@ -71,7 +72,7 @@
   </div>
     <div>
         <p>
-          <strong>Price:</strong>
+          <strong>Price</strong>
           <span><%= @dog.price %> $</span>
         </p>
     </div>

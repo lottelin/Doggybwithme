@@ -1,9 +1,3 @@
-
-.navbar-lewagon .navbar-brand img {
-  width: 100px;
-
-}
-
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
@@ -13,9 +7,13 @@
   flex-grow: 0;
 }
 
-.dropdown-menu {
+.navbar-lewagon .navbar-brand img {
+  width: 100px;
+}
+
+.dropdown-item {
   text-decoration: none;
-  font: 'Comfortaa';
+  font-family: 'Comfortaa' !important;
 }
 
 

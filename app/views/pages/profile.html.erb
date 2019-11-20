@@ -1,7 +1,26 @@
+
 <div class="card-product">
   <div class="card-product-infos">
     <h2 id="fullname"><%= @user.fullname %></h2>
-
-    <p><strong>Recent Bookings</strong></p>
+    <h2><strong>Recent Bookings</strong></h2>
   </div>
 </div>
+
+<div class=card-container>
+
+<% current_user.bookings.each do |booking| %>
+  <div class="card-trip">
+ <h2>Booked Doggy</h2>
+  <% dog = Dog.find(booking.dog_id) %>
+  <h3><%= link_to dog.name, dog_path(dog) %></h3>
+  <%= cl_image_tag dog.photo %>
+<p>Contact details of the <strong>owner</strong></p>
+  <%= dog.user.email %>
+  <p>Doggy booked from</p>
+  <%= booking.start_date.strftime("%A, %b %d") %>
+  <p>until</p>
+  <%= booking.end_date.strftime("%A, %b %d") %>
+</div>
+<% end %>
+
+<div>

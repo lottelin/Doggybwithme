@@ -28,10 +28,6 @@
       </p>
 
     </div>
-    <div class="col-5 text-right">
-     <a class="btn btn-gradient" href="#">Book Me</a>
-     <%#= link_to "Book me",  %>
-  </div>
 </div>
 <p>
   <strong>Description:</strong>
@@ -79,5 +75,14 @@
           <span><%= @dog.price %> $</span>
         </p>
     </div>
+  </div>
+  <div class = container>
+    <%= simple_form_for [@dog, @booking] do |f| %>
+    <%= f.input :start_date %>
+    <%= f.input :end_date %>
+    <br>
+    <br>
+    <%= f.submit "Submit", class: "btn btn-primary" %>
+  <% end %>
   </div>
 </div>

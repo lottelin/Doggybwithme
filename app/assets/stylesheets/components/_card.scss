@@ -1,3 +1,9 @@
+.heading {
+  padding: 15px;
+  margin-bottom: 150px;
+}
+
+
 .card-trip {
   overflow: hidden;
   background: white;
@@ -10,13 +16,18 @@
 }
 
 .card-trip h2 {
-  font-size: 14px;
+  font-size: 25px;
   font-weight: bold;
   margin: 0;
+  margin-bottom: 5px;
 }
 
+.card-trip h2 a {
+}
+
+
 .card-trip p {
-  font-size: 11px;
+  font-size: 18px;
   opacity: .7;
   margin: 0;
 }
@@ -27,6 +38,9 @@
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
+  font-size: 18px;
+  font-weight:600;
+  font-family: 'Comfortaa';
 }
 
 .card-trip-infos .card-trip-user {
@@ -40,12 +54,10 @@
 .dog-traits {
   display: flex;
   justify-content: space-between;
+  margin-top:10px;
 }
 
-// .dog-characteristics {
-//   display: flex;
-//   justify: space-around;
-// }
+
 
 .card-container {
   display: grid;
@@ -63,4 +75,19 @@ i {
   margin-top: 50px;
 }
 
+.card-trip p {
+  font-size: 15px;
+}
 
+.woof {
+  height: 100px;
+  position: absolute;
+  top: -30px;
+  right: 180px;
+  opacity: 0;
+}
+
+.woof-hover:hover + .woof {
+  opacity: 1.0;
+
+}

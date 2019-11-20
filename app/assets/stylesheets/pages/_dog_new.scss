@@ -1,7 +1,37 @@
 h1 {
   font-family: 'Abril Fatface', cursive;
+  font-size: 110px;
+  position: absolute;
+  top:10vh;
 }
 
-background {
-  background-color: white;
+
+.liftadog {
+  border-radius: 50%;
+  width: 70vh;
+  height: 70vh;
+  background: url('https://media.giphy.com/media/QW3uxqfligvyMMpNhz/giphy.gif');
+  background-size: cover;
+  background-position: -4vh 0;
+  position: absolute;
+  bottom:10vh;
+  right: 30vh;
 }
+
+.form-control {
+  width: 40%;
+  border-radius: 20px;
+}
+
+#new_dog {
+  position: absolute;
+  bottom:5vh;
+}
+
+.btn {
+  border-radius: 20px;
+}
+
+// #dog_photo {
+//   border-color: white;
+// }

@@ -19,13 +19,12 @@ h1 {
 }
 
 .form-control {
-  width: 40%;
+  width: 37%;
   border-radius: 20px;
 }
 
 #new_dog {
-  position: absolute;
-  bottom:5vh;
+  z-index: 100;
 }
 
 .btn {

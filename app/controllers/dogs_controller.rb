@@ -15,7 +15,7 @@ class DogsController < ApplicationController
     @dog = Dog.new(dog_params)
     @dog.user = current_user
     if @dog.save
-      redirect_to @dog, notice: 'New doggy profile was created! Woof!'
+      redirect_to @dog, notice: 'Your new dog profile has been created! Woof!'
     else
       render :new
     end
@@ -24,7 +24,7 @@ class DogsController < ApplicationController
   private
 
   def dog_params
-    params.require(:dog).permit(:name, :photo, :photo_cache)
+    params.require(:dog).permit(:name, :photo, :breed, :postcode, :age, :sex, :description, :cuddly, :energetic, :obedient, :couchpotato, :price, :photo_cache)
   end
 
 end

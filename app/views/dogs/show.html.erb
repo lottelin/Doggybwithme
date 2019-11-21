@@ -1,87 +1,74 @@
 
 
 <div class="show-container">
-  <h1><%= @dog.name %></h1>
-  <br>
-  <div class="card-show" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @dog.photo, width: 400, crop: :fill %>')">
-  </div>
-
-  <br>
-  <div class="row">
-    <div class="col-7">
-
-      <p>
-        <strong> Breed: <%= @dog.breed %></strong>
-      </p>
-
-      <p>
-        <strong> <%= @dog.sex %> - <%= @dog.age %></strong>
-      </p>
-
-    </div>
-</div>
-<p>
-  <strong>About <%= @dog.name %>: </strong>
-  <br>
-  <%= @dog.description %>
-</p>
-
-<div class='d-flex justify-content-between'>
-  <div class="card-info">
-
-
- <div class="left">
-      <p>
-        <strong>Cuddly</strong>
-        <% @dog.cuddly.times do %>
-        <i class="fas fa-paw"></i>
-        <% end %>
-      </p>
-
-      <p>
-        <strong>Obedient</strong>
-        <% @dog.obedient.times do %>
-        <i class="fas fa-paw"></i>
-        <% end %>
-      </p>
-    </div>
-
-
-    <div class="right">
-      <p>
-        <strong>Energetic</strong>
-        <% @dog.energetic.times do %>
-        <i class="fas fa-paw"></i>
-        <% end %>
-      </p>
-
-      <p>
-        <strong>Couchpotato</strong>
-        <% @dog.couchpotato.times do %>
-        <i class="fas fa-paw"></i>
-        <% end %>
-      </p>
+  <div class="show-header">
+    <div class="card-show-photo" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @dog.photo, width: 400, crop: :fill %>')">
+    <h1 id="dog-name"><%= @dog.name %></h1>
     </div>
   </div>
+
+
 
     <div>
-        <p id="price">
-          <strong>Price</strong>
-          <span><%= @dog.price %> $</span>
-        </p>
-        <br>
-        <p>
-        <strong>zip</strong>
-        <%= @dog.postcode %>
-      </p>
+      <p id="price">
+        <span>$<%= @dog.price %>/per day</span>
+       </p>
+    </div>
+
+
+
+    <br>
+    <div class="row">
+      <div class="col-7">
+      <p>I am a <%= @dog.breed %> breed.</p>
+
+      <p>I am a <%= @dog.sex %>, <%= @dog.age %> dog.</p>
+      </div>
+    </div>
+
+
+    <div>
+      <div class="description">
+        <p>A little about me</p>
+      </div>
+      <div class="description-content">
+      <p><%= @dog.description %></p>
+      </div>
+    </div>
+
+
+
+
+
+
+  <div class='d-flex justify-content-between'>
+    <div class="card-info">
+      <div class="left">
+        <p><strong>Cuddly&nbsp;&nbsp;</strong><% @dog.cuddly.times do %><i class="fas fa-paw mr-1"></i>
+        <% end %></p>
+
+        <p><strong>Obedient&nbsp;&nbsp;</strong><% @dog.obedient.times do %><i class="fas fa-paw mr-1"></i>
+        <% end %></p>
+      </div>
+
+
+      <div class="right">
+        <p><strong>Energetic&nbsp;&nbsp;</strong><% @dog.energetic.times do %><i class="fas fa-paw mr-2"></i><% end %></p>
+        <p><strong>Couchpotato&nbsp;&nbsp;</strong><% @dog.couchpotato.times do %><i class="fas fa-paw mr-2"></i><% end %></p>
+      </div>
     </div>
   </div>
+
   <div class = container>
     <%= simple_form_for [@dog, @booking] do |f| %>
     <%= f.input :start_date %>
     <%= f.input :end_date %>
     <br>
-    <%= f.submit "BOOK ME", class: "btn btn-primary" %>
-  <% end %>
+
+    <div class='text-center woof-hover'>
+    <%= f.submit "Book Me", class: "btn btn-primarys" %>
+      <%= image_tag "woof.png", alt: "woof", class:'woof' %>
+    </div><% end %>
   </div>
+
 </div>

@@ -3,10 +3,19 @@
   <div class="profile col-6">
     <h1>Welcome!</h1>
     <h2 id="fullname"><%= @user.fullname %></h2>
+
+    <div class='d-flex justify-content-center pt-3'>
+      <div class='paws' src=""></div>
+    </div>
   </div>
 
+
+<div class="vl"></div>
+
+
+
   <div class="booking col-6">
-    <h2>Dog Booked</h2>
+    <h2>Booking History</h2>
     <div>
       <% current_user.bookings.each do |booking| %>
       <% dog = Dog.find(booking.dog_id) %>

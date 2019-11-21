@@ -19,3 +19,21 @@
 .row {
   margin-top:80px;
 }
+
+.paws {
+  width: 480px;
+  height: 480px;
+  background: url(https://media.giphy.com/media/XZg8zevfdhqhNhaNRQ/giphy.gif);
+  background-size: cover;
+  // background-position: -40vh 0;
+  background-size: 480px 480px;
+}
+
+.vl {
+  border-left: 2px solid #e8eaed;
+  height: 500px;
+  position: absolute;
+  left: 42%;
+  top: 40%;
+  margin-left: -3px;
+}

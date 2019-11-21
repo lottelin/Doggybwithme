@@ -21,28 +21,28 @@
         <span><%= dog.breed %>  <%= dog.sex %>  <%= dog.age %></span>
         <div class="dog-traits">
           <div class="dog-characteristics">
-            <p class="mr-4">Cuddly: <% dog.cuddly.to_i.times do  %>
+            <p class="mr-4">Cuddly&nbsp;<% dog.cuddly.to_i.times do  %>
               <i class="fas fa-paw mr-1"></i>
             <% end %>
             </p>
-            <p>Energetic: <% dog.energetic.to_i.times do %>
+            <p>Energetic&nbsp;<% dog.energetic.to_i.times do %>
               <i class="fas fa-paw mr-1"></i>
               <% end %>
             </p>
           </div>
           <div class="dog-characteristics">
-            <p>Obedient: <% dog.obedient.to_i.times do  %>
+            <p>Obedient&nbsp; <% dog.obedient.to_i.times do  %>
               <i class="fas fa-paw mr-1"></i>
             <% end %>
             </p>
-            <p>Couchpotato: <% dog.couchpotato.to_i.times do %>
+            <p>Couchpotato&nbsp; <% dog.couchpotato.to_i.times do %>
               <i class="fas fa-paw mr-1"></i>
             <% end %>
             </p>
           </div>
         </div>
       </div>
-      <h2 class="card-trip-pricing">$<%= dog.price %></h2>
+      <p class="dog-price">$<%= dog.price %></p>
     </div>
   </div>
   <% end %>

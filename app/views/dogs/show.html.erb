@@ -1,43 +1,36 @@
+
+
 <div class="show-container">
-  <div class="card-show" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @dog.photo, height: 300, width: 400, crop: :fill %>')">
-    <!-- <h1><%#= @dog.name %></h1> -->
+  <h1><%= @dog.name %></h1>
+  <br>
+  <div class="card-show" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @dog.photo, width: 400, crop: :fill %>')">
   </div>
 
-  <h1><%= @dog.name %></h1>
-
-
+  <br>
   <div class="row">
     <div class="col-7">
 
       <p>
-        <strong>Breed</strong>
-        <%= @dog.breed %>
+        <strong >I am a <%= @dog.breed %> breed.</strong>
       </p>
 
       <p>
-        <strong>Postcode</strong>
-        <%= @dog.postcode %>
-      </p>
-      <p>
-        <strong>Age</strong>
-        <%= @dog.age %>
-      </p>
-
-      <p>
-        <strong></strong>
-        <%= @dog.sex %>
+        <strong> I am a <%= @dog.sex %>, <%= @dog.age %> dog.</strong>
       </p>
 
     </div>
 </div>
 <p>
-  <strong>Description</strong>
+  <strong>A little about me: </strong>
+  <br>
   <%= @dog.description %>
 </p>
 
 <div class='d-flex justify-content-between'>
   <div class="card-info">
-    <div class="left">
+
+
+ <div class="left">
       <p>
         <strong>Cuddly</strong>
         <% @dog.cuddly.times do %>
@@ -70,11 +63,17 @@
       </p>
     </div>
   </div>
+
     <div>
-        <p>
+        <p id="price">
           <strong>Price</strong>
           <span><%= @dog.price %> $</span>
         </p>
+        <br>
+        <p>
+        <strong>zip</strong>
+        <%= @dog.postcode %>
+      </p>
     </div>
   </div>
   <div class = container>
@@ -82,8 +81,7 @@
     <%= f.input :start_date %>
     <%= f.input :end_date %>
     <br>
-    <br>
-    <%= f.submit "Submit", class: "btn btn-primary" %>
+    <%= f.submit "BOOK ME", class: "btn btn-primary" %>
   <% end %>
   </div>
 </div>

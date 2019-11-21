@@ -12,6 +12,7 @@ Dog.delete_all
 
 User.create(email: 'me@example.com', password: '123456', password_confirmation: '123456')
 
+
 #Dog 1
 url = "https://res.cloudinary.com/dlajprtba/image/upload/v1574169144/Dogs/Springer2_vvqjfi.jpg"
 d1 = Dog.new(name: 'Coolio', user: User.last, breed: 'Mix', postcode: 10439, age: 'Senior', sex: 'Male', description: 'Likes to chillax to the sound of Bob Marley. Perfect lap dog, ideal for those cold, lonely, winter nights.', cuddly: 2, energetic: 1, obedient: 4, couchpotato: 5, price: 20)

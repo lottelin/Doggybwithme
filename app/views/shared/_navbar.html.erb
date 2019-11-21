@@ -6,26 +6,30 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
-<div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <%= link_to "Register",  new_user_registration_path, class: "nav-link" %>
-      </li>
-      <li class="nav-item active">
-        <%= link_to "Log In", new_user_session_path, class: "nav-link" %>
-      </li>
-      <li class="nav-item active">
-        <%= link_to "Dogs", dogs_path, class: "nav-link" %>
-      </li>
-      <li class="nav-item dropdown">
-      <%= image_tag 'bone.png', class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-          <%= link_to "Add Your Dog", new_dog_path, class: 'dropdown-item'  %>
-          <%= link_to "Profile", profile_path, class: 'dropdown-item'  %>
-          <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: 'dropdown-item'  %>
-        </div>
-      </li>
-    </ul>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <% if current_user.present? %>
+          <li class="nav-item active">
+            <%= link_to "Account", profile_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item active">
+            <%= link_to "Add Dog", new_dog_path, class: 'nav-link'  %>
+          </li>
+          <li class="nav-item dropdown">
+            <%= image_tag 'bone.png', class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+              <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'dropdown-item'  %>
+            </div>
+          </li>
+        <% else %>
+          <li class="nav-item active">
+            <%= link_to "Register",  new_user_registration_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item active">
+            <%= link_to "Sign In", new_user_session_path, class: "nav-link" %>
+          </li>
+        <% end %>
+      </ul>
   </div>
 </div>
 

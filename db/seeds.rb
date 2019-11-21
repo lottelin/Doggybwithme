@@ -6,10 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Booking.delete_all
 User.delete_all
 Dog.delete_all
 
-User.create(email: 'nullchar@comcast.net', password: '123456', password_confirmation: '123456')
+User.create(email: 'me@example.com', password: '123456', password_confirmation: '123456')
 
 #Dog 1
 url = "https://res.cloudinary.com/dlajprtba/image/upload/v1574169144/Dogs/Springer2_vvqjfi.jpg"
@@ -51,3 +52,16 @@ url8 = "https://res.cloudinary.com/dlajprtba/image/upload/v1574169140/Dogs/Boxer
 d8 = Dog.new(name: 'Tesla', user: User.last, breed: 'Boxer', postcode: 10439, age: 'Senior', sex: 'Male', description: 'Kind, smart, and gentle. This beautiful dog is ideal for families. He loves to be near people, and is always reinventing himself.', cuddly: 3, energetic: 2, obedient: 5, couchpotato: 5, price: 24)
 d8.remote_photo_url = url8
 d8.save
+
+puts 'Dogs are done'
+
+5.times do
+  Booking.create!(
+    user: User.all.sample,
+    dog: Dog.all.sample,
+    start_date: Time.at(rand * Time.now.to_i),
+    end_date: Time.at(rand * Time.now.to_i)
+    )
+end
+
+puts 'Bookings are done'

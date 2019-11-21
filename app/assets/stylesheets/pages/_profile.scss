@@ -1,93 +1,59 @@
 #fullname {
-  font-weight: normal;
+  font-family:'Comfortaa', cursive;
   color: black;
-  font-size: 40px;
-
 }
 
-#email {
-  font-weight: normal;
-  color: black;
-  font-size: 20px;
 
+.booking {
+  margin-top:120px;
 }
-#postcode {
-  font-weight: normal;
-  color: black;
-  font-size: 20px;
 
+.booking h2 {
+  color:white;
+  background-color: black;
+  text-align: center;
+  width: 480px;
+  border-radius: 50px;
 }
-#age {
-  font-weight: normal;
-  color: black;
-  font-size: 20px;
 
-}
-#dog_preference {
-  font-weight: normal;
-  color: black;
-  font-size: 20px;
-
-}
-.card-product {
-  overflow: hidden;
-  height: 120px;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+#dog-avatar {
+  background-size: cover;
+  background-position: center;
+  // height: 100px;
   display: flex;
+  justify-content: center;
   align-items: center;
-}
-
-.card-product h2 {
-  font-size: 16px;
+  color: white;
+  font-size: 24px;
   font-weight: bold;
-  margin: 0;
+  margin-top: 60px;
+  border-radius: 50%;
+  background-size: cover;
+  width: 100px;
+  height: 100px;
+  position: relative;
 }
 
-.card-product p {
-  font-size: 12px;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
+.row {
+  margin-top:80px;
 }
 
-.card-product .card-product-infos {
-  padding: 16px;
-}
+// .paws {
+//   width: 350px;
+//   height: 350px;
+//   background: url(https://media.giphy.com/media/XZg8zevfdhqhNhaNRQ/giphy.gif);
+//   background-size: cover;
+//   background-size: 350px 350px;
+//   margin-right: 80px;
+//   margin-top: 200px;
+// }
 
-.card-hangout {
-  .card-product {
-  overflow: hidden;
-  height: 120px;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  display: flex;
-  align-items: center;
-}
 
-.card-product img {
-  height: 200px;
-  width: 100%;
-  object-fit: cover;
-}
-
-.card-product h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-}
-
-.card-product p {
-  font-size: 12px;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
-}
-
-.card-product .card-product-infos {
-  padding: 16px;
-}
-
-}
+// .vl {
+//   border-left: 2px solid black;
+//   height: 500px;
+//   position: absolute;
+//   left: 42%;
+//   top: 40%;
+//   margin-left: -3px;
+// }

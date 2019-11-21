@@ -1,24 +1,39 @@
-<div class="card-product">
-  <div class="card-product-infos">
+<div class="row">
+
+  <div class="profile col-6">
+    <h1>Welcome!</h1>
     <h2 id="fullname"><%= @user.fullname %></h2>
-    <h2><strong>Recent Hangouts</strong></h2>
+
+<!--     <div class='d-flex justify-content-center pt-3'>
+      <div class='paws' src=""></div>
+    </div> -->
   </div>
+
+
+<!-- <div class="vl"></div> -->
+
+
+  <div class="booking col-6">
+    <h2>Booking History</h2>
+    <div>
+      <% current_user.bookings.each do |booking| %>
+      <% dog = Dog.find(booking.dog_id) %>
+      <div class="card-show-photo" id="dog-avatar" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path dog.photo, width: 400, crop: :fill %>')"></div>
+
+        <h3><%= link_to dog.name, dog_path(dog) %></h3>
+        <p>Owner Contact E-mail :&nbsp;<%= dog.user.email %></p>
+        <p>Booking Dates :&nbsp;<%= booking.start_date.strftime("%A, %b %d") %>&nbsp;until&nbsp;<%= booking.end_date.strftime("%A, %b %d") %></p>
+      <% end %>
+    </div>
+  </div>
+
+
 </div>
 
-<div class=card-container>
 
-<% current_user.bookings.each do |booking| %>
-  <div class="card-trip">
- <h2>Dog Booked</h2>
-  <% dog = Dog.find(booking.dog_id) %>
-  <h3><%= link_to dog.name, dog_path(dog) %></h3>
-  <%= cl_image_tag dog.photo %>
-<p>Contact details of the <strong>owner</strong></p>
-  <%= dog.user.email %>
-  <p>Doggy booked from</p>
-  <%= booking.start_date.strftime("%A, %b %d") %>
-  <p>until</p>
-  <%= booking.end_date.strftime("%A, %b %d") %>
-</div>
-<% end %>
-</div>
+
+
+
+
+
+

@@ -20,9 +20,8 @@
   font-weight: bold;
   margin: 0;
   margin-bottom: 5px;
-}
-
-.card-trip h2 a {
+  font-family: 'Comfortaa', cursive;
+  text-decoration: none;
 }
 
 
@@ -78,6 +77,12 @@ i {
 .card-trip p {
   font-size: 15px;
 }
+
+.dog-price {
+  color:red;
+}
+
+
 
 .woof {
   height: 100px;

@@ -1,3 +1,21 @@
+#fullname {
+  font-family:'Comfortaa', cursive;
+  color: black;
+}
+
+
+.booking {
+  margin-top:120px;
+}
+
+.booking h2 {
+  color:white;
+  background-color: black;
+  text-align: center;
+  width: 480px;
+  border-radius: 50px;
+}
+
 #dog-avatar {
   background-size: cover;
   background-position: center;
@@ -20,20 +38,22 @@
   margin-top:80px;
 }
 
-.paws {
-  width: 480px;
-  height: 480px;
-  background: url(https://media.giphy.com/media/XZg8zevfdhqhNhaNRQ/giphy.gif);
-  background-size: cover;
-  // background-position: -40vh 0;
-  background-size: 480px 480px;
-}
+// .paws {
+//   width: 350px;
+//   height: 350px;
+//   background: url(https://media.giphy.com/media/XZg8zevfdhqhNhaNRQ/giphy.gif);
+//   background-size: cover;
+//   background-size: 350px 350px;
+//   margin-right: 80px;
+//   margin-top: 200px;
+// }
 
-.vl {
-  border-left: 2px solid #e8eaed;
-  height: 500px;
-  position: absolute;
-  left: 42%;
-  top: 40%;
-  margin-left: -3px;
-}
+
+// .vl {
+//   border-left: 2px solid black;
+//   height: 500px;
+//   position: absolute;
+//   left: 42%;
+//   top: 40%;
+//   margin-left: -3px;
+// }

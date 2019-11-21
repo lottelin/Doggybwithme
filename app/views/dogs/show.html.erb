@@ -11,17 +11,17 @@
     <div class="col-7">
 
       <p>
-        <strong >I am a <%= @dog.breed %> breed.</strong>
+        <strong> Breed: <%= @dog.breed %></strong>
       </p>
 
       <p>
-        <strong> I am a <%= @dog.sex %>, <%= @dog.age %> dog.</strong>
+        <strong> <%= @dog.sex %> - <%= @dog.age %></strong>
       </p>
 
     </div>
 </div>
 <p>
-  <strong>A little about me: </strong>
+  <strong>About <%= @dog.name %>: </strong>
   <br>
   <%= @dog.description %>
 </p>

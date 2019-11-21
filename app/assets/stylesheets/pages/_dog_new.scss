@@ -1,7 +1,7 @@
 h1 {
   font-family: 'Abril Fatface', cursive;
   font-size: 110px;
-  position: absolute;
+  position: relative;
   top:10vh;
 }
 
@@ -18,13 +18,23 @@ h1 {
   right: 30vh;
 }
 
-.form-control {
-  width: 37%;
-  border-radius: 20px;
-}
 
 #new_dog {
   z-index: 100;
+}
+
+.new-dog-form {
+  margin-top: 120px;
+  margin-left:250px;
+}
+
+.dog-form-2 {
+  margin-left: 300px;
+}
+
+.form-control {
+  width: 300px;
+  border-radius: 20px;
 }
 
 .btn {

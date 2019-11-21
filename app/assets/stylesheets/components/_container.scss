@@ -59,9 +59,13 @@ padding: 16px;
   margin-top: 70px;
 }
 
+#show-hover-btn {
+  position:relative;
+}
+
 .btn {
   margin-top: 30px;
-  margin-bottom: 100px;
+  margin-bottom: 30px;
   border-style: solid;
   border-color: #036ce7;
   background: #036ce7;
@@ -75,11 +79,9 @@ color: white !important;
 }
 
 .woof {
-  height: 100px;
+  height: 300px;
   position: absolute;
-  top: -30px;
-  right: 180px;
-  opacity: 0;
+  opacity: 1;
 }
 
 .woof-hover:hover + .woof {

@@ -1,7 +1,87 @@
 .show-container {
   width: 700px;
   margin: auto;
+  margin-top: 10px;
 }
+
+.show-container h1 {
+  top: 25vh;
+}
+
+.show-header {
+  justify-content:space-between;
+  vertical-align: middle;
+  margin-bottom: 50px;
+}
+
+.dogname {
+  margin-top: 200px;
+  margin-left:600px;
+}
+
+
+
+.row {
+  margin-top: 30px;
+  border-left: 4px solid black;
+}
+
+.description {
+  margin-top: 40px;
+}
+
+.description p {
+  text-decoration: underline;
+}
+
+
 #price {
-  color: #df42d1;
+  color: red;
+  text-align: right;
+  font-size:20px;
+  position: absolute;
+  right: 150px;
+}
+
+.card-info {
+margin-top: 30px;
+width:100%;
+overflow: hidden;
+height: 120px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 16px;
+}
+
+
+#new_booking {
+  margin-top: 70px;
+}
+
+.btn {
+  margin-top: 30px;
+  margin-bottom: 100px;
+  border-style: solid;
+  border-color: #036ce7;
+  background: #036ce7;
+  color:white;
+  font-size: 15px;
+  padding: 10px;
+}
+
+.btn:hover {
+color: white !important;
+}
+
+.woof {
+  height: 100px;
+  position: absolute;
+  top: -30px;
+  right: 180px;
+  opacity: 0;
+}
+
+.woof-hover:hover + .woof {
+  opacity: 1.0;
 }

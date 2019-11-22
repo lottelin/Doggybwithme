@@ -1,9 +1,9 @@
+
 <div class="row">
   <div class="dog-form col-6">
     <%= simple_form_for [@dog] do |f| %>
     <%= f.input :name %>
     <%= f.input :breed %>
-    <%= f.input :postcode %>
     <%= f.input :description %>
     <%= f.input :sex, :label => 'Female or Male?' %>
     <%= f.input :age, priority: [ "Puppy" ], collection: ["Puppy", "Teen", "Adult", "Senior"]%>
@@ -21,7 +21,6 @@
     <%= f.submit "Submit", class: "btn btn-primary" %>
     <% end %>
   </div>
-
 </div>
 
 

@@ -23,6 +23,7 @@
       <% current_user.dogs.each do |dog| %>
       <div class="card-show-photo" id="dog-avatar" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path dog.photo, width: 400, crop: :fill %>')"></div>
         <h3><%= link_to dog.name, dog_path(dog) %></h3>
+        <%= link_to 'Remove', dog, method: :delete, data: { confirm: 'Are you sure you want to remove your dog?' }, class: "btn btn-primary" %>
       <% end %>
     </div>
   </div>

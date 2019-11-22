@@ -12,6 +12,6 @@ class BookingsController < ApplicationController
 
     @booking = Booking.new(start_date: start_date, end_date: end_date, user_id: current_user.id, dog_id: params[:dog_id])
     @booking.save!
-    redirect_to profile_path
+    redirect_to profile_path, notice: 'High 5 with your dog soon! Woof!!'
   end
 end

@@ -2,7 +2,7 @@
   <%= simple_form_for [@dog] do |f| %>
   <%= f.input :name %>
   <%= f.input :breed %>
-  <%= f.input :postcode %>
+  <%#= f.input :postcode %>
   <%= f.input :description %>
   <%= f.input :sex, :label => 'Female or Male?' %>
   <%= f.input :age, priority: [ "Puppy" ], collection: ["Puppy", "Teen", "Adult", "Senior"]%>

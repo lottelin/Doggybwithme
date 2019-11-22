@@ -18,7 +18,7 @@ class DogsController < ApplicationController
     @dog = Dog.new(dog_params)
     @dog.user = current_user
     if @dog.save
-      redirect_to @dog, notice: 'Your new dog profile has been created! Woof!'
+      redirect_to profile_path, notice: 'Your new dog profile has been created! Woof!'
     else
       render :new
     end

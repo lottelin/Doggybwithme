@@ -3,7 +3,6 @@ class Dog < ApplicationRecord
   belongs_to :user
   validates :name, presence: true
   validates :breed, presence: true
-  validates :postcode, presence: true
   validates :cuddly, presence: true
   validates :energetic, presence: true
   validates :obedient, presence: true

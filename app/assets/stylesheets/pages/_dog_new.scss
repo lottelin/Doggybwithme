@@ -17,21 +17,18 @@ h1 {
   position: absolute;
   bottom:10vh;
   right: 30vh;
+  z-index: -100;
 }
 
-
-#new_dog {
-  z-index: 100;
-}
 
 .new-dog-form {
   margin-top: 230px;
   margin-left:270px;
 }
 
-.dog-form-2 {
-  margin-left: 300px;
-}
+// .dog-form-2 {
+//   // margin-left: 300px;
+// }
 
 .form-control {
   width: 300px;

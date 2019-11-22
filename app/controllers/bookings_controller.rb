@@ -14,4 +14,11 @@ class BookingsController < ApplicationController
     @booking.save!
     redirect_to profile_path, notice: 'High 5 with your dog soon! Woof!!'
   end
+
+  def destroy
+    @booking = Booking.find(params[:id])
+    @booking.destroy
+    redirect_to profile_path, notice: 'Your booking has been deleted! Woof!!'
+  end
+
 end

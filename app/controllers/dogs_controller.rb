@@ -24,6 +24,12 @@ class DogsController < ApplicationController
     end
   end
 
+  def destroy
+    @dog = Dog.find(params[:id])
+    @dog.destroy
+    redirect_to profile_path, notice: 'Dog was successfully removed.'
+  end
+
   private
 
   def dog_params

@@ -1,55 +1,34 @@
-<div class="row">
-
-
-  <div class="profile col-6 d-flex">
-    <h1>Welcome!</h1>
-  <h2 id="fullname"> <%= @user.fullname %> </h2>
-
-
-<!--     <div class='d-flex justify-content-center pt-3'>
-      <div class='paws' src=""></div>
-    </div> -->
-  </div>
-
-
-<!-- <div class="vl"></div> -->
-<br>
-<br>
-<div class="card-container">
-  <div class="card-trip">
-<div class="booking col-6">
-    <h2>My Dogs</h2>
-    <div>
-      <% current_user.dogs.each do |dog| %>
-      <div class="card-show-photo" id="dog-avatar" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path dog.photo, width: 400, crop: :fill %>')"></div>
-        <h3><%= link_to dog.name, dog_path(dog) %></h3>
-      <% end %>
-    </div>
-  </div>
+<div class="ml-5 mt-5">
+  <h5 id="fullname"> <%= @user.fullname %> </h2>
+  <h5 id="welcome">Welcome!</h1>
 </div>
 
-<div class="card-trip">
-  <div class="booking col-6">
-    <h2>Recent Hangouts</h2>
-    <div>
-      <% current_user.bookings.each do |booking| %>
-      <% dog = Dog.find(booking.dog_id) %>
-      <div class="card-show-photo" id="dog-avatar" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path dog.photo, width: 400, crop: :fill %>')"></div>
+<div class="row mt-5 pt-5">
+  <div class="col-6">
+    <h2 class="booking">My Dogs</h2>
+    <% current_user.dogs.each do |dog| %>
+      <div class="d-flex justify-content-center">
+        <div class="card-show-photo" id="my-dog-avatar" style="background-image: url('<%= cl_image_path dog.photo%>')">
+        </div>
+      </div>
+      <h3 class="text-center"><%= link_to dog.name, dog_path(dog) %></h3>
+    <% end %>
 
+  </div>
+
+  <div class="col-6">
+    <h2 class="booking">Recent Hangouts</h2>
+    <% current_user.bookings.each do |booking| %>
+    <% dog = Dog.find(booking.dog_id) %>
+
+    <div class="d-flex align-items-center">
+      <div class="card-show-photo" id="dog-avatar" style="background-image: url('<%= cl_image_path dog.photo %>')"></div>
+      <div class="ml-5 mt-5">
         <h3><%= link_to dog.name, dog_path(dog) %></h3>
         <p>Owner Contact E-mail :&nbsp;<%= dog.user.email %></p>
         <p>Booking Dates :&nbsp;<%= booking.start_date.strftime("%A, %b %d") %>&nbsp;until&nbsp;<%= booking.end_date.strftime("%A, %b %d") %></p>
-      <% end %>
+      </div>
     </div>
+    <% end %>
   </div>
 </div>
-
-</div>
-</div>
-
-
-
-
-
-
-

@@ -10,7 +10,7 @@ Booking.delete_all
 User.delete_all
 Dog.delete_all
 
-User.create(fullname: 'Charlotte Lin', email: 'me@example.com', password: '123456', password_confirmation: '123456')
+User.create(email: 'me@example.com', password: '123456', password_confirmation: '123456')
 
 
 #Dog 1

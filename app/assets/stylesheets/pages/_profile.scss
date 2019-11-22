@@ -1,42 +1,44 @@
 #fullname {
   font-family:'Comfortaa', cursive;
   color: black;
+  font-size: 32px;
 }
 
-
-.booking {
-  margin-top:120px;
+#welcome {
+  font-size: 110px;
 }
 
-.booking h2 {
+h2.booking {
   color:white;
   background-color: black;
   text-align: center;
-  width: 480px;
   border-radius: 50px;
+  font-family:'Comfortaa', cursive;
+  padding:10px;
+  width: 600px;
+  margin-left: 50px;
 }
 
 #dog-avatar {
   background-size: cover;
   background-position: center;
-  // height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
   margin-top: 60px;
   border-radius: 50%;
-  background-size: cover;
   width: 100px;
   height: 100px;
-  position: relative;
+  // position: relative;
 }
 
-.row {
-  margin-top:80px;
+
+#my-dog-avatar {
+  background-size: cover;
+  background-position: center;
+  margin-top: 60px;
+  border-radius: 50%;
+  margin-bottom: 30px;
+
 }
+
 
 // .paws {
 //   width: 350px;

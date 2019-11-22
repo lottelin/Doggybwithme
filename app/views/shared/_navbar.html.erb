@@ -5,9 +5,11 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+            <%= link_to "Discover", dogs_path, class: 'nav-link'  %>
+          </li>
         <% if current_user.present? %>
           <li class="nav-item active">
             <%= link_to "Account", profile_path, class: "nav-link" %>
@@ -16,10 +18,8 @@
             <%= link_to "Add Dog", new_dog_path, class: 'nav-link'  %>
           </li>
           <li class="nav-item dropdown">
-            <%= image_tag 'bone.png', class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-              <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'dropdown-item'  %>
-            </div>
+          <li class="nav-item active">
+            <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'nav-link'  %>
           </li>
         <% else %>
           <li class="nav-item active">
@@ -29,7 +29,7 @@
             <%= link_to "Sign In", new_user_session_path, class: "nav-link" %>
           </li>
         <% end %>
+        <%= image_tag 'bone.png', class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
       </ul>
   </div>
 </div>
-

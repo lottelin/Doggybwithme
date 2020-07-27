@@ -1,1 +1,5 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+# Doggybwithme
+
+`Doggybwithme` is a web application where you can rent out your dogs as well as renting other dogs.
+
+High 5 with a dog, just one click away. 

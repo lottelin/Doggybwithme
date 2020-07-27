@@ -2,7 +2,7 @@
 
 `Doggybwithme` is a web application where you can rent out your dogs as well as renting others'.
 
-<img src="https://media.giphy.com/media/iGdTOXKyNtX2fwzeDJ/giphy.gif" align="middle"/>
+<img src="https://media.giphy.com/media/iGdTOXKyNtX2fwzeDJ/giphy.gif"/>
 <br>
 
 ### Tech Stacks
@@ -19,3 +19,4 @@
 - Backend 
 - Project pitch and presenter
 <br><br>
+

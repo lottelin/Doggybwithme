@@ -1,5 +1,23 @@
 # Doggybwithme
 
-`Doggybwithme` is a web application where you can rent out your dogs as well as renting other dogs.
+`Doggybwithme` is a web application where you can rent out your dogs as well as renting others'.
 
-High 5 with a dog, just one click away. 
+### Cool dog high 5, just one click away. 
+
+<img src="https://media.giphy.com/media/iGdTOXKyNtX2fwzeDJ/giphy.gif" align="middle"/>
+<br>
+
+### Tech Stacks
+- Ruby on Rails
+- css, html 
+- Postgres database
+- Cloudinary
+- Deployed on Heroku
+<br><br>
+
+### Role
+- Project lead
+- Lead front-end designer
+- Backend 
+- Project pitch and presenter
+<br><br>

@@ -2,8 +2,6 @@
 
 `Doggybwithme` is a web application where you can rent out your dogs as well as renting others'.
 
-### Cool dog high 5, just one click away. 
-
 <img src="https://media.giphy.com/media/iGdTOXKyNtX2fwzeDJ/giphy.gif" align="middle"/>
 <br>
 
